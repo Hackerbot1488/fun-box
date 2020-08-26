@@ -49,11 +49,8 @@ export const Card: React.FC<CardProps> = ({
 			setSelected(false);
 		}
 	};
-	const onEnterHandler = () => {
-		selected && setTitle("Котэ не одобряет?");
-	};
 	return (
-		<div>
+		<div className="card-wrap">
 			<div
 				className={classes}
 				onClick={() => !disabled && onClickHandler()}
@@ -96,7 +93,12 @@ export const Card: React.FC<CardProps> = ({
 			) : (
 				<p className="description">
 					Чего сидишь? Порадуй котэ,&nbsp;
-					<span className="description__link">купи.</span>
+					<span
+						className="description__link"
+						onClick={setSelected.bind(null, true)}
+					>
+						купи.
+					</span>
 				</p>
 			)}
 		</div>

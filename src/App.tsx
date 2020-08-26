@@ -31,14 +31,20 @@ const cards: CardProps[] = [
 	},
 ];
 export const App: React.FC<{}> = () => {
+	console.log(document.documentElement.clientWidth);
 	return (
-		<>
+		<div className="wrap-container">
 			<p className="title">Ты сегодня покормил кота?</p>
 			<div className="container">
-				{cards.map((card: CardProps) => {
-					return <Card {...card} />;
-				})}
+				{/* {cards.map((card: CardProps, index: number) => {
+					return <Card {...card} key={card.taste} />;
+				})} */}
+				<Card {...cards[0]} />
+				<div className="container">
+					<Card {...cards[1]} />
+					<Card {...cards[2]} />
+				</div>
 			</div>
-		</>
+		</div>
 	);
 };
