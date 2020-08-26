@@ -31,7 +31,6 @@ const cards: CardProps[] = [
 	},
 ];
 export const App: React.FC<{}> = () => {
-	console.log(document.documentElement.clientWidth);
 	return (
 		<div className="wrap-container">
 			<p className="title">Ты сегодня покормил кота?</p>
