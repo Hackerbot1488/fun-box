@@ -59,29 +59,36 @@ export const Card: React.FC<CardProps> = ({
 					!disabled && selected && setTitle("Котэ не одобряет?")
 				}
 			>
-				<p className="card__title">{title}</p>
-				<p className="card__name">Нямушка</p>
-				<p className="card__taste">{taste}</p>
-				<p className="card__text">
-					<span style={{ fontWeight: "bold" }}>{pieces}&nbsp;</span>
-					{pieceForm(pieces!)}
-				</p>
-				{mouses! > 0 && (
-					<p className="card__text">
-						{mouses! > 1 ? (
-							<span style={{ fontWeight: "bold" }}>{mouses}&nbsp;</span>
-						) : null}
-						{mouseForm(mouses!)} в подарок
-					</p>
-				)}
-				{moreInfo && <p className="card__text">{moreInfo}</p>}
-				<div className="card__container">
-					<img src={Cat} alt="Cat" className="card__image" />
+				<div className="head">
+					<div className="head__angle"></div>
+					<div className="head__end">
+						<p className="card__title">{title}</p>
+					</div>
 				</div>
-				<div className="card__ellipse">
-					<span className="card__weight">{weight}</span>
-					<br></br>
-					кг
+				<div className="body">
+					<p className="card__name">Нямушка</p>
+					<p className="card__taste">{taste}</p>
+					<p className="card__text">
+						<span style={{ fontWeight: "bold" }}>{pieces}&nbsp;</span>
+						{pieceForm(pieces!)}
+					</p>
+					{mouses! > 0 && (
+						<p className="card__text">
+							{mouses! > 1 ? (
+								<span style={{ fontWeight: "bold" }}>{mouses}&nbsp;</span>
+							) : null}
+							{mouseForm(mouses!)} в подарок
+						</p>
+					)}
+					{moreInfo && <p className="card__text">{moreInfo}</p>}
+					<div className="card__container">
+						<img src={Cat} alt="Cat" className="card__image" />
+					</div>
+					<div className="card__ellipse">
+						<span className="card__weight">{weight}</span>
+						<br></br>
+						кг
+					</div>
 				</div>
 			</div>
 			{disabled ? (
