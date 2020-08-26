@@ -111,6 +111,7 @@ body {
 	}
 	.card-wrap:first-child {
 		margin: 0px auto 60px;
+		width: 320px;
 	}
 	.container .container .card-wrap:first-child {
 		margin: 0;
@@ -128,12 +129,15 @@ body {
 		margin: 0 auto;
 	}
 	.card-wrap:first-child {
-		margin-bottom: 40px;
+		width: 320px;
+		margin: 0 auto 40px;
 	}
 	.container .container .card-wrap:first-child {
-		margin-bottom: 40px;
+		width: 320px;
+		margin: 0 auto 40px;
 	}
 	.card-wrap:last-child {
-		margin-bottom: 80px;
+		width: 320px;
+		margin: 0 auto 80px;
 	}
 }
