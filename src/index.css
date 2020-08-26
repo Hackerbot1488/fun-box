@@ -1,18 +1,28 @@
 @font-face {
 	font-family: "Exo2.0-Thin";
-	src: url("./fonts/Exo2.0-Thin.otf") format("opentype");
+	src: url("./fonts/Exo2.0-Thin/Exo2.0-Thin.eot");
+	src: url("./fonts/Exo2.0-Thin/Exo2.0-Thin.otf") format("opentype");
+	src: url("./fonts/Exo2.0-Thin/Exo2.0-Thin.ttf") format("truetype");
+	src: url("./fonts/Exo2.0-Thin/Exo2.0-Thin.woff") format("woff");
+	src: url("./fonts/Exo2.0-Thin/Exo2.0-Thin.svg") format("svg");
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
 	font-family: "TrebuchetMs";
-	src: url("./fonts/TrebushetMS.ttf") format("opentype");
+	src: url("./fonts/TrebuchetMS/TrebushetMS.eot");
+	src: url("./fonts/TrebuchetMS/TrebushetMS.ttf") format("opentype");
+	src: url("./fonts/TrebuchetMS/TrebushetMS.woff") format("woff");
+	src: url("./fonts/TrebuchetMS/TrebuchetMS.svg") format("svg");
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
 	font-family: "TrebuchetMs";
+	src: url("./fonts/TrebuchetMS-Bold/TrebuchetMS-Bold.eot");
 	src: url("./fonts/TrebuchetMS-Bold.ttf") format("opentype");
+	src: url("./fonts/TrebuchetMS-Bold/TrebuchetMS-Bold.woff") format("woff");
+	src: url("./fonts/TrebuchetMS-Bold/TrebuchetMS-Bold.svg") format("svg");
 	font-style: normal;
 	font-weight: bold;
 }
