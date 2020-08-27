@@ -19,6 +19,9 @@ const pieceForm = (count: number): string => {
 	const end = count % 10;
 	return end === 1 ? "порция" : end > 1 && end < 5 ? "порции" : "порций";
 };
+const isMobile = (): boolean => {
+	return document.documentElement.clientWidth < 993;
+};
 export const Card: React.FC<CardProps> = ({
 	taste,
 	weight,
@@ -36,8 +39,18 @@ export const Card: React.FC<CardProps> = ({
 		{ card_selected: selected }
 	);
 	let clicked: boolean = false;
+	const mobileClickHandler = () => {
+		if (selected) {
+			setSelected(false);
+			setTitle("Сказочное заморское яство");
+		} else {
+			setSelected(true);
+			setTitle("Котэ не одобряет?");
+		}
+	};
 	const onClickHandler = () => {
 		clicked = true;
+		isMobile() && mobileClickHandler();
 	};
 	const onLeaveHandler = () => {
 		selected && setTitle("Сказочное заморское яство");
@@ -54,9 +67,9 @@ export const Card: React.FC<CardProps> = ({
 			<div
 				className={classes}
 				onClick={() => !disabled && onClickHandler()}
-				onMouseLeave={() => !disabled && onLeaveHandler()}
+				onMouseLeave={() => !disabled && !isMobile() && onLeaveHandler()}
 				onMouseEnter={() =>
-					!disabled && selected && setTitle("Котэ не одобряет?")
+					!disabled && !isMobile() && selected && setTitle("Котэ не одобряет?")
 				}
 			>
 				<div className="head">
@@ -102,7 +115,9 @@ export const Card: React.FC<CardProps> = ({
 					Чего сидишь? Порадуй котэ,&nbsp;
 					<span
 						className="description__link"
-						onClick={setSelected.bind(null, true)}
+						onClick={() =>
+							(isMobile() && mobileClickHandler()) || setSelected(true)
+						}
 					>
 						купи.
 					</span>
