@@ -99,7 +99,7 @@ body {
 }
 @media (max-width: 992px) {
 	.wrap-container {
-		max-height: unset;
+		max-height: 2000px;
 	}
 	.container:last-child {
 		flex-direction: column;
