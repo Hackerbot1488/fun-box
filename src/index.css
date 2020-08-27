@@ -62,7 +62,7 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	margin-bottom: 66px;
-	width: fit-content;
+	/* width: fit-content; */
 }
 .container .container:last-child {
 	margin-bottom: 0;
@@ -123,7 +123,8 @@ body {
 @media (max-width: 700px) {
 	.container .container:last-child {
 		flex-direction: column;
-		width: fit-content;
+		/* width: fit-content; */
+		width: 320px;
 	}
 	.container {
 		margin: 0 auto;
