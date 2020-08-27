@@ -9,6 +9,7 @@ export interface CardProps {
 	mouses?: number;
 	moreInfo?: string;
 	disabled?: boolean;
+	isSelected?: boolean;
 	activeText?: string;
 }
 const mouseForm = (count: number): string => {
@@ -29,9 +30,10 @@ export const Card: React.FC<CardProps> = ({
 	mouses,
 	moreInfo,
 	disabled,
+	isSelected,
 	activeText,
 }) => {
-	const [selected, setSelected] = useState(false);
+	const [selected, setSelected] = useState(!!isSelected);
 	const [title, setTitle] = useState("Сказочное заморское яство");
 	const classes = classNames(
 		"card",

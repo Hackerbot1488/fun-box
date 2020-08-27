@@ -10,6 +10,7 @@ const cards: CardProps[] = [
 		mouses: 1,
 		moreInfo: "",
 		disabled: false,
+		isSelected: true,
 		activeText: "Печень утки разварная с артишоками.",
 	},
 	{
@@ -19,6 +20,7 @@ const cards: CardProps[] = [
 		mouses: 2,
 		moreInfo: "",
 		disabled: false,
+		isSelected: false,
 		activeText: "Головы щучьи с чесноком да свежайшая сёмгушка.",
 	},
 	{
@@ -28,6 +30,7 @@ const cards: CardProps[] = [
 		mouses: 5,
 		moreInfo: "заказчик доволен",
 		disabled: true,
+		isSelected: false,
 		activeText: "Филе из цыплят с трюфелями в бульоне.",
 	},
 ];
